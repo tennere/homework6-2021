@@ -1,0 +1,154 @@
+/* reg 3 */
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: #f1f1f1;
+    background-image: url(../images/concrete_seamless.png);
+}
+
+/* req 4 */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* req 5 */
+a, a:visited{
+    color:#0000FF;
+}
+
+/* req 6 */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+/* req 9 */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+}
+
+/* req 7 */
+.card > header{
+    background-color: #288088;
+    border: 2px solid #45adad;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+/* req 8 */
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+/* req 10 */
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#logo {
+    animation-name: logos;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logos{
+    from {width: 50px;
+        opacity: 0;}
+    to {width: 425px;
+        opacity: 1;}
+}
+
+@media screen and (min-width: 850px){
+
+    .main_header{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .card{
+        flex-basis: 250px;
+        
+    }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    body{
+        background-image: none;
+    }
+
+    .main_header{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .pricing{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 250px;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+    footer{
+        visibility: visible;
+    }
+}
