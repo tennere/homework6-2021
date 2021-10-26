@@ -23,12 +23,6 @@ a, a:visited{
     flex-direction: column;
 }
 
-/* req 9 */
-.card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 450px;
-}
 
 /* req 7 */
 .card > header{
@@ -50,7 +44,12 @@ a, a:visited{
 
 }
 
-
+/* req 9 */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+}
 
 /* req 10 */
 .gallery img{
@@ -63,6 +62,7 @@ a, a:visited{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 #logo {
@@ -97,9 +97,11 @@ a, a:visited{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        align-self:flex-end;
     }
 
     .card{
+        display: flex;
         flex-basis: 250px;
         
     }
@@ -134,6 +136,7 @@ a, a:visited{
     }
 
     .pricing{
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: flex-end;
