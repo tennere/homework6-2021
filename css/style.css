@@ -128,14 +128,14 @@ a:visited{
 
     body{
         background-image: none;
-        /* background-color: white; */
+        background-color: white;
     }
 
-    body > header{
+    /* body > header{
         display: flex;
         flex-direction: column;
 
-    }
+    } */
     .nav_links{
         display: flex;
         flex-direction: row;
@@ -169,4 +169,14 @@ a:visited{
     footer{
         visibility: visible;
     }
+
+    
+    .pricing ul li:nth-child(odd)::before{
+        content: "👍";
+    }
+
+    .pricing ul li:nth-child(even)::after{
+        content: "👍";
+    }
+   
 }
