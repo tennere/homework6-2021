@@ -1,6 +1,6 @@
 /* reg 3 */
 body{
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Alegreya Sans SC', serif;
     background-color: #f1f1f1;
     background-image: url(../images/concrete_seamless.png);
 }
@@ -10,10 +10,11 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: static;
 }
 
 /* req 5 */
-a, a:visited{
+a:visited{
     color:#0000FF;
 }
 
@@ -37,7 +38,7 @@ a, a:visited{
 /* req 8 */
 .pricing{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,7 +53,7 @@ a, a:visited{
 }
 
 /* req 10 */
-.gallery img{
+.gallery > img{
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
@@ -72,10 +73,15 @@ a, a:visited{
 }
 
 @keyframes logos{
-    from {width: 50px;
-        opacity: 0;}
-    to {width: 425px;
-        opacity: 1;}
+    from {
+        width: 50px;
+        opacity: 0;
+    }
+    to {
+        width: 425px;
+        opacity: 1;
+    }
+    
 }
 
 @media screen and (min-width: 850px){
@@ -86,19 +92,23 @@ a, a:visited{
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
+        top: 0;
+        /* padding-top: 0; */
     }
+
 
     .nav_links{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
-    .pricing{
+    /* .pricing{
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        align-self:flex-end;
-    }
+        /* flex-wrap: nowrap; */
+        /* align-self:flex-end; */
+    /* } */ 
 
     .card{
         display: flex;
@@ -118,6 +128,7 @@ a, a:visited{
 
     body{
         background-image: none;
+        background-color: white;
     }
 
     .main_header{
@@ -148,6 +159,10 @@ a, a:visited{
     }
 
     .gallery{
+        display: none;
+    }
+
+    #gallery{
         display: none;
     }
 
