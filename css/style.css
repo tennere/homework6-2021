@@ -15,7 +15,7 @@ header{
 
 /* req 5 */
 a:visited{
-    color:#0000FF;
+    color:blue;
 }
 
 /* req 6 */
@@ -86,9 +86,9 @@ a:visited{
 
 @media screen and (min-width: 850px){
 
-    .main_header{
+    body > header{
         display: flex;
-        position: fixed;
+        position: sticky;
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
@@ -124,14 +124,14 @@ a:visited{
     }
 }
 
-@media screen and (min-width: 1000px){
+@media print{
 
     body{
         background-image: none;
-        background-color: white;
+        /* background-color: white; */
     }
 
-    .main_header{
+    body > header{
         display: flex;
         flex-direction: column;
 
